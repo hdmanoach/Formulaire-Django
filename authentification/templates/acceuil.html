@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Acceuil</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                color: #333;
+            }
+            .container {
+                width: 80%;
+                margin: auto;
+                overflow: hidden;
+            }
+            h1 {
+                text-align: center;
+                margin-top: 20px;
+            }
+            .home {
+                text-align: center;
+                padding: 50px;
+            }
+            .home h2 {
+                color: #009579;
+            }
+            .home p {
+                font-size: 18px;
+            }
+            .home button {
+                padding: 10px 20px;
+                background-color: #009579;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            .home button a {
+                color: white;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container home">
+            <h2>Bienvenu {{user.username}}</h2>
+            <p>Vous êtes connecté avec succès.</p>
+            <button><a href="{% url 'deconnexion' %}">Se déconnecter</a></button>
+        </div>
+    </body>
+</html>
